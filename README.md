@@ -18,16 +18,17 @@ Prepration steps:
 
 usage steps:
 
-       You may directly use Silver-Configuration/releases/1.0.1/binaries to running up silver server or compible the source            code to generate binaries by yourself
+       You may directly use Silver-Configuration/releases/1.0.1/binaries to running up 
+       silver server or compible the source code to generate binaries by yourself
        Introduction for this section just for using exsting binaries
     
     1. download https://github.com/morcble/Silver-Configuration into your computer.
     
     2. config releases/1.0.1/binaries/config/config.properties
       config below properties for connectiong your mysql server
-        DefaultContext.db.account = <B>root</B>
-        DefaultContext.db.password = <B>123456</B>
-        DefaultContext.db.connectstr = jdbc:mysql://<B>my-local-mysql.com</B>:3306/SilverDB?characterEncoding=utf-8
+        DefaultContext.db.account = root
+        DefaultContext.db.password = 23456
+        DefaultContext.db.connectstr= jdbc:mysql://<mysql ip>:3306/SilverDB?characterEncoding=utf-8
     
     3. goto directory Silver-Configuration/releases/1.0.1/binaries
     
@@ -35,6 +36,8 @@ usage steps:
 
     5. open  http://127.0.1.1:8888/SilverFrontend/index.html on your web browser to see the management page.
     
-    6. import Silver-Configuration/releases/1.0.1/binaries/silverClient.jar to your project to load properties form silver          server .
+    6. import Silver-Configuration/releases/1.0.1/binaries/silverClient.jar to your project 
+        to load properties form silver server .
     
-    For more detail , please visit my blog https://blog.csdn.net/fengliangjun727/article/details/82669206
+    For more details , 
+        please visit my blog https://blog.csdn.net/fengliangjun727/article/details/82669206

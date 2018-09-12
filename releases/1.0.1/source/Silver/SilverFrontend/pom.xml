@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cnautosoft.silver</groupId>
+    <artifactId>Silver</artifactId>
+    <version>1.0.1</version>
+  </parent>
+  <artifactId>SilverFrontend</artifactId>
+  <packaging>war</packaging>
+  
+  <build>
+		<plugins>
+			<plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>  
+                    <artifactId>maven-resources-plugin</artifactId>  
+                    <version>3.0.0</version>  
+                    <executions>  
+                        <execution>  
+                            <id>copy-resources1</id>  
+                            <phase>package</phase>  
+                            <goals>  
+                                <goal>copy-resources</goal>  
+                            </goals>  
+                            <configuration> 
+                            	<resources>  
+                                    <resource>  
+                                        <directory>target/SilverFrontend-1.0.1</directory>   
+<!--                                    <filtering>false</filtering>   -->
+                                    </resource>  
+                                </resources>  
+                            	<outputDirectory>../dist/SilverFrontend</outputDirectory> 
+                            </configuration>  
+                            <inherited></inherited>  
+                        </execution>  
+                       
+                    </executions>  
+                </plugin>  
+		</plugins>
+	</build>
+</project>

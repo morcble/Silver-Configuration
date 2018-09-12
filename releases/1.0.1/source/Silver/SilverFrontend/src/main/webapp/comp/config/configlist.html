@@ -1,0 +1,147 @@
+<div id="REGION" class="hidden">
+	<div class="panel panel-info">
+			<div class="panel-heading">
+				<i class="fa fa-fw fa-minus fa-lg collapsePanel"></i>
+				<span>Config列表</span>
+			</div>
+			<div class="loadingIcon  text-center"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></div>
+			<div class="panel-body">
+				<div>
+		 			<button class="btn btn-default regionSearchPrompt">
+						<message key="global_msg.search"></message>
+					</button>
+					<button class="btn btn-default regionNewBtn">
+						<message key="global_msg.add"></message>
+						<!-- <input type="hidden" class="parameter"  paraName="paraName" region-attr="valType"> -->
+					</button>
+				</div>
+				
+				<div class="panel panel-default region-search-div hidden">
+						<div class="panel-body">
+							<div class="row margin-bottom-15px">
+								<div class="col-xs-6 flex-center">
+									<div class="col-xs-4">
+										<message key="config_msg.groupId"></message>
+									</div>
+									<div class="col-xs-8">
+										<input type="text" region-attr="groupId" class="form-control region-searchable" maxlength="50">
+									</div>
+								</div>
+							</div>
+							<div class="row margin-bottom-15px">
+								<div class="col-xs-6 flex-center">
+									<div class="col-xs-4">
+										<message key="config_msg.itemId"></message>
+									</div>
+									<div class="col-xs-8">
+										<input type="text" region-attr="itemId" class="form-control region-searchable" maxlength="50">
+									</div>
+								</div>
+							</div>
+					
+							<div class="row">
+								<div class="center-block">
+			      					<button class="btn btn-default regionSearchBtn"><message key="global_msg.submit"></message></button>&nbsp;
+									<button class="btn btn-default regionResetBtn"><message key="global_msg.reset"></message></button>
+		   						</div>
+							</div>
+						</div>
+					</div>
+		
+	
+		
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="margin-bottom">
+								<table class="table table-striped table-bordered table-hover table-normal">
+									<thead>
+										<tr>
+											<th><input class="selectAll" type='checkbox' /></th>
+											<th><message key="global_msg.index"></message></th>
+											<th><message key="config_msg.groupId"></message></th>
+											<th><message key="config_msg.itemId"></message></th>
+											<th region-order="createDt"><message key="global_msg.create_dt"></message></th>
+											<th region-order="updateDt"><message key="global_msg.update_dt"></message></th>
+											<th><message key="global_msg.operation"></message></th>
+										</tr>
+									</thead>
+									<tbody region-list="list">
+										<tr class="hidden"> 
+											<td><input type="checkbox" class="multipleCbs"/></td>
+											<td><span region-attr="index"></span></td>
+											<td><span region-attr="groupId"></span></td>
+											<td><span region-attr="itemId"></span></td>
+											<td><span region-attr="createDt"></span</td>
+											<td><span region-attr="updateDt"></span></td>
+											<td>
+												<a href="javascript:void(0)" onclick="RegionUtil.handleListData(REGION.viewData,event)"><i class="fa fa-pencil fa-fw" title="Edit"></i></a>
+												&nbsp;
+												<a href="javascript:void(0)"  onclick="RegionUtil.handleListData(REGION.deleteData,event)"><i class="fa fa-trash-o fa-fw" title="Delete"></i></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						
+							<div>
+								<button class="btn btn-default regionBatchDelBtn hidden"><message key="global_msg.batch_delete"></message></button>
+							</div>
+							
+							<div class="paginationControl"></div>
+							
+							<div class="norecordmsg hidden"><message key="global_msg.no_record_found"></message></div>
+						</div>
+					</div>
+			</div>	
+	</div>
+</div>	
+
+<script type="text/javascript">
+var REGION = {
+		viewData :function (rowData){
+			this.viewRecord(rowData,this.regionId);
+		},
+		deleteData:function(rowData){
+			this.deleteData(rowData);
+		},
+		/*
+		it will block form submission if return false
+		*/
+		beforeValidate:function(){
+			return true;
+		},
+		afterValidate:function(){
+		}
+
+}
+
+
+RegionUtil.ready(function(){
+	var task = RegionUtil.loadMessage("messages"+Config.LOCALE+"/config_msg.js");
+	task.done(function(){
+		var regionGrid = new RegionGrid("#REGION");
+		//regionGrid.addValidator("groupId",new Array(emptyReg),new Array("必填字段"));
+		//regionGrid.addValidator("itemId",new Array(emptyReg),new Array("必填字段"));
+		regionGrid.listRes = "/silver/config/list";
+			
+		regionGrid.addTitle = "新增Config";//view title
+		regionGrid.viewTitle = "编辑Config";//view title
+		regionGrid.popupSize = "m";
+		regionGrid.reqRes = "/comp/config/configview.html";
+		regionGrid.beforeRetrieveData = null;
+		regionGrid.afterRetrieveData = null;
+		regionGrid.beforeRenderData = null;
+		regionGrid.afterRenderData = null;
+		regionGrid.beforeValidate = REGION.beforeValidate;
+		regionGrid.afterValidate = REGION.afterValidate;
+		regionGrid.deleteCallBack = null;
+		regionGrid.search();		
+	});
+	
+	
+});
+
+</script>
+
+
+

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Built-By: fenglj
+Class-Path: . lib/. config/.  lib/H2O-1.0.1.jar lib/cglib-3.2.3.jar li
+ b/asm-5.0.4.jar lib/ant-1.9.6.jar lib/ant-launcher-1.9.6.jar lib/java
+ -jwt-3.3.0.jar lib/jackson-databind-2.9.2.jar lib/jackson-annotations
+ -2.9.0.jar lib/jackson-core-2.9.2.jar lib/commons-codec-1.11.jar lib/
+ SilverCommon-1.0.1.jar lib/sqlite-jdbc-3.20.1.jar lib/javax.servlet-a
+ pi-3.1.0.jar lib/mysql-connector-java-5.1.32.jar lib/gson-2.3.1.jar l
+ ib/jedis-2.0.0.jar lib/commons-pool-1.5.5.jar lib/netty-all-4.1.25.Fi
+ nal.jar lib/protostuff-core-1.0.8.jar lib/protostuff-api-1.0.8.jar li
+ b/protostuff-runtime-1.0.8.jar lib/protostuff-collectionschema-1.0.8.
+ jar lib/objenesis-2.1.jar lib/zookeeper-3.4.6.jar lib/slf4j-api-1.6.1
+ .jar lib/slf4j-log4j12-1.6.1.jar lib/log4j-1.2.16.jar lib/jline-0.9.9
+ 4.jar lib/junit-3.8.1.jar lib/netty-3.7.0.Final.jar lib/curator-frame
+ work-2.7.1.jar lib/curator-client-2.7.1.jar lib/guava-16.0.1.jar lib/
+ curator-recipes-2.7.1.jar lib/curator-test-2.7.1.jar lib/javassist-3.
+ 18.1-GA.jar lib/commons-math-2.2.jar lib/curator-x-discovery-2.7.1.ja
+ r lib/jackson-mapper-asl-1.9.13.jar lib/jackson-core-asl-1.9.13.jar l
+ ib/curator-x-discovery-server-2.7.1.jar lib/jsr311-api-1.1.1.jar lib/
+ commons-fileupload-1.3.3.jar lib/commons-io-2.2.jar
+Build-Jdk: 1.8.0_172
+Created-By: Maven Integration for Eclipse
+Main-Class: com.cnautosoft.silver.RegionSoftServer
+

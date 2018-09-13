@@ -2,7 +2,7 @@
 Remote Configuration Server
 
 Purpose:
-    Move all the configurations into silver server , which can manage the configurations online and apply properties changes to your applicaiton once you changed them on silver server. It decouples the configuration for various enviroments such as dev enviroment, sit testing enviroment and production enviroment . 
+    Move all the configurations into Silver server , which can help to manage the configurations online and apply properties changes to your applicaiton once been changed on silver server. It decouples the configuration for various enviroments such as dev, sit ,uat and production enviroment . 
 
 Runtime enviroment required: 
     JDK1.8 or plus
@@ -13,7 +13,7 @@ Programe Language:
 
 Prepration steps:
    1. make sure you had setup java enviroment.
-   2. create db schema silverdb
+   2. create db schema silverdb.
       CREATE SCHEMA silverdb DEFAULT CHARACTER SET utf8 ;
 
 usage steps:
@@ -37,7 +37,7 @@ usage steps:
     5. open  http://127.0.1.1:8888/SilverFrontend/index.html on your web browser to see the management page.
     
     6. import Silver-Configuration/releases/1.0.1/binaries/silverClient.jar to your project 
-        to load properties form silver server .
+        to load properties from silver server .
     
     For more details , 
         please visit my blog https://blog.csdn.net/fengliangjun727/article/details/82669206

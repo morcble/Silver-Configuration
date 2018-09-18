@@ -38,6 +38,23 @@ usage steps:
     
     6. import Silver-Configuration/releases/1.0.1/binaries/silverClient.jar to your project 
         to load properties from silver server .
+    or config your maven as below
+    <dependency>
+      <groupId>com.cnautosoft.silver</groupId>
+      <artifactId>SilverClient</artifactId>
+      <version>1.0.1</version>
+    </dependency> 
     
-    For more details , 
-        please visit my blog https://blog.csdn.net/fengliangjun727/article/details/82669206
+    7. client usage:
+        PropertiesManager pm = PropertiesManager.getInstance();
+        /**
+        *
+        *
+        */
+        pm.init(<silver server host>,<silver server port>,<group id>,<item id>);
+        pm.getProperty(<configKey>)
+
+ 
+    
+    
+    中文介绍 , 请参见博客 https://blog.csdn.net/fengliangjun727/article/details/82669206

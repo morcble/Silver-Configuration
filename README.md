@@ -47,12 +47,11 @@ usage steps:
     
     7. client usage:
         PropertiesManager pm = PropertiesManager.getInstance();
-        /**
-        *
-        *
-        */
         pm.init(<silver server host>,<silver server port>,<group id>,<item id>);
-        pm.getProperty(<configKey>)
+        
+        
+        for the place you need to get property configuration in Silver Server
+        PropertiesManager.getInstance().getProperty(<configKey>)
 
  
     

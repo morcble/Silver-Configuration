@@ -9,7 +9,7 @@
 				detachMode:true,
 				devMode:true,
 				frontendPath :  "/SilverFrontend/",
-				backendPath  : "http://localhost:9090/Silver/region",
+				backendPath  : "http://localhost:9002/Silver/region",
 				compressReq:false
 		}
 		
